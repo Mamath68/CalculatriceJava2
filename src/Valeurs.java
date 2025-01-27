@@ -1,7 +1,7 @@
 public class Valeurs implements ICalcul {
 
     private final EType type = EType.VALEURS;
-    private double valeurs;
+    private final double valeurs;
 
     public Valeurs(double valeur) {
         this.valeurs = valeur;
@@ -12,11 +12,8 @@ public class Valeurs implements ICalcul {
         return this.type;
     }
 
-    public double getValeurs() {
-        return this.valeurs;
-    }
-
-    public void setValeurs(double valeurs) {
-        this.valeurs = valeurs;
+    @Override
+    public String toString() {
+        return "" + this.valeurs;
     }
 }
